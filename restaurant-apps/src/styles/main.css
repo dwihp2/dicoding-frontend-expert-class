@@ -3,6 +3,8 @@ img {
 }
 
 * {
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
 
@@ -26,8 +28,8 @@ body {
 }
 
 .app-bar a {
-    display: inline-block;
-    padding: 1em;
+    /* display: inline-block; */
+    padding: 0.2em;
     text-decoration: none;  
     color: #616161;
 }
@@ -43,13 +45,25 @@ body {
     grid-template-columns: repeat(3, 1fr);
 }
 
+.app-bar__menu {
+    font-size: 32px;
+    margin: 0px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /* app-bar logo */
 .app-bar__logo {
-    grid-column: 1;
+    display: inline-flex;   
+    justify-content: flex-start;
+    align-items: center;    
+    padding-left: 1.3em;
 } 
 
 .app-bar__logo_title {
-
+    font-family:fantasy;
+    font-size: x-large;
 }
 
 /* app-bar nav__item */

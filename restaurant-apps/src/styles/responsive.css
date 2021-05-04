@@ -1,0 +1,54 @@
+@media screen and ( max-width: 499px) {
+    .app-bar__nav {
+        margin-top: 3em;
+        z-index: 10;
+        background-color: #fff;
+        width: 300px;
+        position: absolute;
+
+        /* This trasform moves the drawer off canvas. */
+        -webkit-transform: translate(-300px, 0);
+        transform: translate(-300px, 0);
+
+        /* animate the drawer*/
+        transition: transform 0.3s ease;
+    }
+
+    .app-bar__inner {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .app-bar__logo {
+        padding: 5px 0px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .open {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+
+    .app-bar__nav_list {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        display: list-item;
+    }
+
+    .app-bar__nav_item {
+        /* display: list-item; */
+        border-bottom: 1px solid #e0e0e0;
+        width: 100%;
+        text-align: left;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .app-bar__menu {
+        display: none;
+    }
+}

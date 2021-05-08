@@ -1,7 +1,10 @@
 import 'regenerator-runtime'; /* for async await transpile */
 import '../styles/main.css';
 import '../styles/responsive.css';
+import { appendData } from '../scripts/fetch_data.js';
 
+// call fetch data function
+appendData();
 
 const menu = document.querySelector('#menu');
 const hero = document.querySelector('.hero');

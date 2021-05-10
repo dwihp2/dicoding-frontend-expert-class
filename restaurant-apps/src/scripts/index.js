@@ -3,9 +3,6 @@ import '../styles/main.css';
 import '../styles/responsive.css';
 import { appendData } from '../scripts/fetch_data.js';
 
-// call fetch data function
-appendData();
-
 const menu = document.querySelector('#menu');
 const hero = document.querySelector('.hero');
 const main = document.querySelector('main');
@@ -21,5 +18,8 @@ hero.addEventListener("click", ()=> {
 });
 
 main.addEventListener("click", ()=> {
-    drawer.remove('open');
+    drawer.classList.remove('open');
 });
+
+// call fetch data function
+appendData();

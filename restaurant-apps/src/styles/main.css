@@ -91,6 +91,13 @@ body {
     white-space: nowrap;
 }
 
+.app-bar__nav_item a {
+    padding: 1.5em 1em;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
 /*
  * Jumbotron
  */
@@ -104,6 +111,9 @@ body {
     background-image: url("/images/heros/hero-image_1.jpg");
     background-position: center;
     background-color: green;
+    background-repeat: no-repeat;
+    background-size: cover;    
+    border-block: 2px solid black;
 }
 
 .hero__inner {
@@ -112,13 +122,13 @@ body {
 }
 
 .hero__title {
-    color: #fff;
+    color: antiquewhite;
     font-weight: 500;
     font-size: 36px;
 }
 
 .hero__tagline {
-    color: #fff;
+    color: antiquewhite;
     margin-top: 16px;
     font-size: 18px;
     font-weight: 300;
@@ -170,9 +180,8 @@ main {
 }
 
 .post-item__thumbnail {
+    min-height: 260px;
     position: relative;
-    display: inline-block;
-    background-position: bottom;
     width: 100%;
 }
 
@@ -188,6 +197,8 @@ main {
     position: absolute;
     justify-content: center;
     align-items: center;
+    opacity: 80%;
+    font-weight: bolder;
 }
 
 /* post item content main */
@@ -196,7 +207,7 @@ main {
 }
 
 .post-item__rating {
-    font-size: 10px;
+    font-size: 1rem;
     text-transform: uppercase;
     color: #999;
 }
@@ -213,6 +224,7 @@ main {
 }
 
 .post-item__title a {
+    padding: 1em 0em;
     text-decoration: none;
     color: inherit;
 }
@@ -223,3 +235,33 @@ main {
     line-height: 1.5em;
 }
 
+.post-item__description p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 75ch;
+}
+
+/* Footer */
+
+Footer {
+    border-top: 2px solid darkgrey;
+    display: flex;
+    padding: 1em;
+    justify-content: center;
+}
+
+/* skip content */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background-color: #bf1722;
+    color: white;
+    padding: 8px;
+    z-index: 100;
+ }
+  
+ .skip-link:focus {
+    top: 0;
+ }

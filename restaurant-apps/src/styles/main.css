@@ -33,7 +33,7 @@ body {
 
 .app-bar a {
     /* display: inline-block; */
-    padding: 0.1em;
+    /* padding: 0.1em; */
     text-decoration: none;  
     color: #616161;
 }
@@ -50,11 +50,14 @@ body {
 }
 
 .app-bar__menu {
+    padding: 0.1em 1em;
     font-size: 32px;
     margin: 0px auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    border: none;
+    background: none;
 }
 
 /* app-bar logo */
@@ -66,6 +69,7 @@ body {
 } 
 
 .app-bar__logo_title {
+    padding: 0.5em 1em;
     font-family:fantasy;
     font-size: x-large;
 }
@@ -86,7 +90,7 @@ body {
 
 .app-bar__nav_item {
     display: inline-grid;
-    padding: 1em;
+    padding: 0em 1em;
     text-transform: capitalize;
     white-space: nowrap;
 }

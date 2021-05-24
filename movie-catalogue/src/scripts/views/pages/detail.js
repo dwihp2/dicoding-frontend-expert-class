@@ -1,19 +1,19 @@
 import UrlParser from '../../routes/url-parser';
 import TheMovieDbSource from '../../data/themoviedb-source';
+import {createMovieItemTemplate} from '../templates/template-creator';
 
 const Detail = {
   async render() {
     return `
-      <h2>Detail Page</h2>
+      <div id="movie" class="movie"></div>
     `;
   },
 
   async afterRender() {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
-    const movies = await TheMovieDbSource.detailMovie(url.id);
-    console.log(movies);
-
-    // TODO tampilkan movies kedalam DOM
+    const movie = await TheMovieDbSource.detailMovie(url.id);
+    const moviesContainer = document.querySelector('#movie');
+    moviesContainer.innerHTML = createMovieItemTemplate(movie);
   },
 };
 

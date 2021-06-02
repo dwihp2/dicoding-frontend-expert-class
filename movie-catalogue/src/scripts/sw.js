@@ -1,7 +1,7 @@
 import 'regenerator-runtime';
 import CacheHelper from './utils/cache-helper';
 
-const {asset} = global.ServiceWorkerOption;
+const {assets} = global.serviceWorkerOption;
 
 self.addEventListener('install', (event) => {
   event.waitUntil(CacheHelper.cachingAppShell([...assets, './']));

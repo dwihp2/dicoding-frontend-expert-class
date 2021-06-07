@@ -3,6 +3,9 @@ import '../styles/style.css';
 import '../styles/responsive.css';
 import App from './views/app';
 import swRegister from './utils/sw-register';
+import WebSocketInitiator from './utils/websocket-initiator';
+import CONFIG from './globals/config';
+import WebsocketInitiator from './utils/websocket-initiator';
 
 const app = new App({
   button: document.querySelector('#hamburgerButton'),
@@ -17,4 +20,5 @@ window.addEventListener('hashchange', () => {
 window.addEventListener('load', () => {
   app.renderPage();
   swRegister();
+  WebsocketInitiator.init(CONFIG.WEB_SOCKET_SERVER);
 });

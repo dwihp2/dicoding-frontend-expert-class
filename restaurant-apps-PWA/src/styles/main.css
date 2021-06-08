@@ -1,0 +1,271 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body,html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 12px;
+    color: #424242;
+    text-align: center;
+}
+
+/* app-bar */
+.app-bar {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.app-bar__logo {
+
+}
+
+.app-bar a {
+    /* display: inline-block; */
+    /* padding: 0.1em; */
+    text-decoration: none;  
+    color: #616161;
+}
+
+.app-bar a:hover {
+    ext-decoration: underline;
+    color: #000;
+}
+
+
+.app-bar__inner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.app-bar__menu {
+    padding: 0.1em 1em;
+    font-size: 32px;
+    margin: 0px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background: none;
+}
+
+/* app-bar logo */
+.app-bar__logo {
+    display: inline-flex;   
+    justify-content: flex-start;
+    align-items: center;    
+    padding-left: 1.3em;
+} 
+
+.app-bar__logo_title {
+    padding: 0.5em 1em;
+    font-family:fantasy;
+    font-size: x-large;
+}
+
+/* app-bar nav__item */
+.app-bar__nav {
+    grid-column: 3;
+
+}
+
+.app-bar__nav_list {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: inline-grid;
+    grid-auto-flow: column;
+}
+
+.app-bar__nav_item {
+    display: inline-grid;
+    padding: 0em 1em;
+    text-transform: capitalize;
+    white-space: nowrap;
+}
+
+.app-bar__nav_item a {
+    padding: 1.5em 1em;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/*
+ * Jumbotron
+ */
+
+ .hero {
+    display: flex;
+    align-items: center;
+    min-height: 380px;
+    width: 100%;
+    text-align: center;
+    background-image: url("../public/images/heros/hero-image_1.jpg");
+    background-position: center;
+    background-color: green;
+    background-repeat: no-repeat;
+    background-size: cover;    
+    border-block: 2px solid black;
+}
+
+.hero__inner {
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.hero__title {
+    color: antiquewhite;
+    font-weight: 500;
+    font-size: 25px;
+}
+
+.hero__tagline {
+    color: antiquewhite;
+    margin-top: 16px;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+
+/*
+ * main
+ */
+
+main {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/*
+ * content
+ */
+
+.content {
+    padding: 32px;
+}
+
+/*
+ * post
+ */
+
+ .posts {
+    margin: 32px auto auto;
+    text-align: left;
+    overflow: auto;
+}
+
+/*
+ * post item
+ */
+
+.post-item {
+    margin: 16px 0;
+    border: 0.2px solid lightgray;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+/* post item content header */
+.post-item__content_header {    
+    display: inline-flex;
+}
+
+.post-item__thumbnail {
+    min-height: 200px;
+    position: relative;
+    width: 100%;
+}
+
+.post-item__location {
+    display: flex;
+    margin-top: 1em;
+    width: 7em;
+    height: 3em;
+    border: 1px solid powderblue;
+    border-radius: 5px;
+    background: whitesmoke;
+    z-index: 100;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    opacity: 80%;
+    font-weight: bolder;
+}
+
+/* post item content main */
+.post-item__content_main {
+    padding: 16px 32px 32px 32px;
+}
+
+.post-item__rating {
+    font-size: .8rem;
+    color: #999;
+}
+
+.post-item__title {
+    font-weight: 500;
+    font-size: 18px;
+    margin-top: 16px;
+    transition: 0.3s opacity;
+}
+
+.post-item__title:hover {
+    opacity: 0.5;
+}
+
+.post-item__title a {
+    padding: 1em 0em;
+    text-decoration: none;
+    color: inherit;
+}
+
+.post-item__description {
+    margin-top: 16px;
+    font-size: 14px;
+    line-height: 1.5em;
+}
+
+.post-item__description p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 75ch;
+}
+
+/* Footer */
+
+Footer {
+    border-top: 2px solid darkgrey;
+    display: flex;
+    padding: 1em;
+    justify-content: center;
+}
+
+/* skip content */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background-color: #bf1722;
+    color: white;
+    padding: 8px;
+    z-index: 100;
+ }
+  
+ .skip-link:focus {
+    top: 0;
+ }

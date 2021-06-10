@@ -222,3 +222,41 @@ text-decoration: none;
     align-items: center;
     justify-content: center;
 }
+
+/*
+    Hero
+ */
+
+ .hero {
+    display: flex;
+    align-items: center;
+    min-height: 380px;
+    width: 100%;
+    text-align: center;
+    background-image: url("../public/images/heros/hero-image_1.jpg");
+    background-position: center;
+    background-color: green;
+    background-repeat: no-repeat;
+    background-size: cover;    
+    border-block: 2px solid black;
+}
+
+.hero__inner {
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.hero__title {
+    font-family: monospace;
+    color: black;
+    font-weight: 500;
+    font-size: 42px;
+}
+
+.hero__tagline {
+    font-family: monospace;
+    color: black;
+    margin-top: 16px;
+    font-size: 34px;
+    font-weight: 300;
+}

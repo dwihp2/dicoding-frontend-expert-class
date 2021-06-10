@@ -5,6 +5,8 @@ import App from './views/app';
 import swRegister from './utils/sw-register';
 import CONFIG from './globals/config';
 import WebsocketInitiator from './utils/websocket-initiator';
+import {} from '../scripts/views/templates/customHero';
+import {} from '../scripts/views/templates/customFooter';
 
 const app = new App({
   button: document.querySelector('#hamburgerButton'),

@@ -1,10 +1,8 @@
 import 'regenerator-runtime';
 import '../styles/style.css';
 import '../styles/responsive.css';
+import swRegister from '../scripts/utils/sw-register';
 import App from './views/app';
-import swRegister from './utils/sw-register';
-import CONFIG from './globals/config';
-import WebsocketInitiator from './utils/websocket-initiator';
 import {} from '../scripts/views/templates/customHero';
 import {} from '../scripts/views/templates/customFooter';
 
@@ -20,6 +18,6 @@ window.addEventListener('hashchange', () => {
 
 window.addEventListener('load', () => {
   app.renderPage();
-  // swRegister();
+  swRegister();
   // WebsocketInitiator.init(CONFIG.WEB_SOCKET_SERVER);
 });

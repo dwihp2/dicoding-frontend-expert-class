@@ -1,10 +1,10 @@
 import CONFIG from '../../globals/config';
 
-const createMovieDetailTemplate = (resto) => `
+const createRestoDetailTemplate = (resto) => `
 
-  <h2 class="movie__title">${resto.name}</h2>
-  <img class="movie__poster" src="${CONFIG.BASE_IMAGE_URL + resto.pictureId}" alt="${resto.name}" />
-  <div class="movie__info">
+  <h2 class="resto__title">${resto.name}</h2>
+  <img class="resto__poster" src="${CONFIG.BASE_IMAGE_URL + resto.pictureId}" alt="${resto.name}" />
+  <div class="resto__info">
     <h3>Information</h3>
       <h4>City</h4>
       <p>${resto.city}</p>
@@ -21,11 +21,11 @@ const createMovieDetailTemplate = (resto) => `
       <h4>Rating</h4>
       <p>⭐${resto.rating}</p>
   </div>
-  <div class="movie__overview">
+  <div class="resto__overview">
     <<h3>Description></h3>
     <p>${resto.description}</p>
   </div>
-  <div class="movie__overview">
+  <div class="resto__overview">
     <h3>Customer Review</h3>
     ${resto.customerReviews.map((review) => `
         <div class="restaurantInfoList">
@@ -37,16 +37,16 @@ const createMovieDetailTemplate = (resto) => `
   </div>
 `;
 
-const createMovieItemTemplate = (resto) => `
-  <div class="movie-item">
-    <div class="movie-item__header">
-      <img class="movie-item__header__poster" alt="${resto.name}" 
+const createRestoItemTemplate = (resto) => `
+  <div class="resto-item">
+    <div class="resto-item__header">
+      <img class="resto-item__header__poster" alt="${resto.name}" 
       src="${CONFIG.BASE_IMAGE_URL + resto.pictureId}" />
-      <div class="movie-item__header__rating">
-        <p>⭐️<span class="movie-item__header__rating__score">${resto.rating}</span></p>
+      <div class="resto-item__header__rating">
+        <p>⭐️<span class="resto-item__header__rating__score">${resto.rating}</span></p>
       </div>
     </div>
-    <div class="movie-item__content">
+    <div class="resto-item__content">
       <h3><a href="${`/#/detail/${resto.id}`}">${resto.name}</a></h3>
       <p>${resto.description}</p>
     </div>
@@ -54,20 +54,20 @@ const createMovieItemTemplate = (resto) => `
 `;
 
 const createLikeButtonTemplate = () => `
-  <button aria-label="like this movie" id="likeButton" class="like">
+  <button aria-label="like this resto" id="likeButton" class="like">
     <i class="fa fa-heart-o" aria-hidden="true"></i>
   </button>
 `;
 
 const createLikedButtonTemplate = () => `
-  <button aria-label="unlike this movie" id="likeButton" class="like">
+  <button aria-label="unlike this resto" id="likeButton" class="like">
     <i class="fa fa-heart" aria-hidden="true"></i>
   </button>
 `;
 
 export {
-  createMovieDetailTemplate,
-  createMovieItemTemplate,
+  createRestoDetailTemplate,
+  createRestoItemTemplate,
   createLikeButtonTemplate,
   createLikedButtonTemplate,
 };

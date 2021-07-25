@@ -1,12 +1,12 @@
-import TheMovieDbSource from '../../data/themoviedb-source';
-import {createMovieItemTemplate} from '../templates/template-creator';
+import TheRestoDbSource from '../../data/restaurantdb-source';
+import {createRestoItemTemplate} from '../templates/template-creator';
 
 const Upcoming = {
   async render() {
     return `
     <div class="content">
       <h2 class="content__heading">Upcoming in Cinema</h2>
-      <div id="movies" class="movies">
+      <div id="restaurants" class="restaurants">
 
 
       </div>
@@ -15,10 +15,10 @@ const Upcoming = {
   },
 
   async afterRender() {
-    const movies = await TheMovieDbSource.upcomingMovies();
-    const moviesContainer = document.querySelector('#movies');
-    movies.forEach((movie) => {
-      moviesContainer.innerHTML += createMovieItemTemplate(movie);
+    const restaurants = await TheRestoDbSource.upcomingRestaurants();
+    const restaurantsContainer = document.querySelector('#restaurants');
+    restaurants.forEach((resto) => {
+      restaurantsContainer.innerHTML += createRestoItemTemplate(resto);
     });
   },
 };

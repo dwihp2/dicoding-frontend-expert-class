@@ -1,12 +1,12 @@
-import FavoriteMovieIdb from '../../data/favoritemovie-idb';
-import {createMovieItemTemplate} from '../templates/template-creator';
+import FavoriteRestoIdb from '../../data/favoriteresto-idb';
+import {createRestoItemTemplate} from '../templates/template-creator';
 
 const Like = {
   async render() {
     return `
       <div class="content">
-        <h2 class="content__heading">Your Liked Movie</h2>
-        <div id="movies" class="movies">
+        <h2 class="content__heading">Your Liked Resto</h2>
+        <div id="restaurants" class="restaurants">
 
         </div>
       </div>
@@ -14,10 +14,10 @@ const Like = {
   },
 
   async afterRender() {
-    const movies = await FavoriteMovieIdb.getAllMovies();
-    const moviesContainer = document.querySelector('#movies');
-    movies.forEach((movie) => {
-      moviesContainer.innerHTML += createMovieItemTemplate(movie);
+    const restaurants = await FavoriteRestoIdb.getAllRestaurants();
+    const restaurantsContainer = document.querySelector('#restaurants');
+    restaurants.forEach((resto) => {
+      restaurantsContainer.innerHTML += createRestoItemTemplate(resto);
     });
   },
 };

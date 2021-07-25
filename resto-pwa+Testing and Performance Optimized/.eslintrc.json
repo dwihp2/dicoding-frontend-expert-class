@@ -1,0 +1,29 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "node": true,
+        "jasmine":true
+    },
+    "extends": [
+        "airbnb-base"
+    ],
+    "parserOptions": {
+        "ecmaVersion": 11,
+        "sourceType": "module"
+    },
+    "rules": {
+        "linebreak-style":"off",
+        "require-jsdoc":"off",
+        "no-unused-vars":"warn",
+        "max-len":"off",
+        "new-cap":"off",
+        "no-underscore-dangle":"off",
+        "import/no-extraneous-dependencies": 0,
+        "no-console": 0,
+        "no-restricted-globals": 0,
+        "consistent-return": 0,
+        "no-prototype-builtins": 0
+    },
+    "plugins": ["jasmine"]
+}

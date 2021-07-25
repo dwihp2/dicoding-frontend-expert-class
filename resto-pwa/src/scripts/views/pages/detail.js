@@ -1,33 +1,33 @@
 import UrlParser from '../../routes/url-parser';
-import TheMovieDbSource from '../../data/themoviedb-source';
-import {createMovieDetailTemplate} from '../templates/template-creator';
+import TheRestoDbSource from '../../data/restaurantdb-source';
+import {createRestoDetailTemplate} from '../templates/template-creator';
 import LikeButtonInitiator from '../../utils/like-button-initiator';
 import CONFIG from '../../globals/config';
 
 const Detail = {
   async render() {
     return `
-      <div id="movie" class="movie"></div>
+      <div id="resto" class="resto"></div>
       <div id="likeButtonContainer"></div>
     `;
   },
 
   async afterRender() {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
-    const movie = await TheMovieDbSource.detailMovie(url.id);
-    const moviesContainer = document.querySelector('#movie');
-    moviesContainer.innerHTML = createMovieDetailTemplate(movie);
+    const resto = await TheRestoDbSource.detailResto(url.id);
+    const restaurantsContainer = document.querySelector('#resto');
+    restaurantsContainer.innerHTML = createRestoDetailTemplate(resto);
 
     LikeButtonInitiator.init({
       LikeButtonContainer: document.querySelector('#likeButtonContainer'),
-      movie: {
-        id: movie.id,
-        name: movie.name,
-        description: movie.description,
+      resto: {
+        id: resto.id,
+        name: resto.name,
+        description: resto.description,
         backdrop_path: CONFIG.BASE_IMAGE,
-        pictureId: movie.pictureId,
-        rating: movie.rating,
-        city: movie.city,
+        pictureId: resto.pictureId,
+        rating: resto.rating,
+        city: resto.city,
       },
     });
   },
